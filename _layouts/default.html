@@ -26,8 +26,7 @@
         {
           if (pax['PAX name'] != "" && pax['Best time'] != "99:00:00") {
             if (pax['Team Name'] == "The Cougars") {
-                // var table = document.getElementById("sean_id");
-                var tableref =  document.getElementById('sean_id').getElementsByTagName("tbody")[0];
+                var tableref =  document.getElementById('cougar_id').getElementsByTagName("tbody")[0];
                 //append row at end
                 var row = tableref.insertRow(-1);
                 //all cells are in one row
@@ -35,11 +34,29 @@
                 var cell2 = row.insertCell(1);
                 var cell3 = row.insertCell(2);
                 var cell4 = row.insertCell(3);
+                cell1.innerHTML = pax['Rank'];
                 cell1.innerHTML = pax['PAX name'];
-                cell2.innerHTML = pax['Best time'];
-                cell3.innerHTML = pax['Age'];
+                cell3.innerHTML = pax['Best time'];
+                cell4.innerHTML = pax['Age'];
             }
           }
+          if (pax['PAX name'] != "" && pax['Best time'] != "99:00:00") {
+            if (pax['Team Name'] == "The Rabbits") {
+                var tableref =  document.getElementById('rabbit_id').getElementsByTagName("tbody")[0];
+                //append row at end
+                var row = tableref.insertRow(-1);
+                //all cells are in one row
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+                var cell4 = row.insertCell(3);
+                cell1.innerHTML = pax['Rank'];
+                cell1.innerHTML = pax['PAX name'];
+                cell3.innerHTML = pax['Best time'];
+                cell4.innerHTML = pax['Age'];
+            }
+          }
+
         }
         console.log(data);
       }
