@@ -24,7 +24,7 @@
       // document.getElementById("runner").innerHTML = "<strong>Runner:</strong> " + [ data[0]['PAX name'], data[1]['PAX name'] ].join(", ");
       for (var pax of data)
       {
-        $("#sean_id").append("<tr><td>" + pax['PAX name'] + "</td></td>" + pax['Best time for 13.1 miles'] + "</td><td>" + pax['Age'] + "</td><td>" + pax['Team Name'] + "</td></tr>");
+        $("#sean_id").append("<tr><td>" + pax['PAX name'] + "</td></td>" + pax['Best time'] + "</td><td>" + pax['Age'] + "</td><td>" + pax['Team Name'] + "</td></tr>");
       }
       console.log(data);
     }
