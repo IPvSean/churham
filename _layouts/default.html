@@ -24,7 +24,7 @@
         var data = results.data
         for (var pax of data)
         {
-          if (pax['PAX name'] == "") {
+          if (pax['PAX name'] != "" && pax['Best time'] != "99:00:00") {
             if (pax['Team Name'] == "The Cougars") {
                 // var table = document.getElementById("sean_id");
                 var tableref =  document.getElementById('sean_id').getElementsByTagName("tbody")[0];
