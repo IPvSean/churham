@@ -5,7 +5,7 @@
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
     <script type="text/javascript">
-      var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQmF_V2-lON6Zm_FEkSIhvDbtC18rcMWLqgosN7km_HiCv6zlRVMy7gB0XIkaJb7w5vwzfTFgppLpWo/pub?output=csv';
+      var public_spreadsheet_url = 'https://cors-anywhere.herokuapp.com/https://docs.google.com/spreadsheets/d/e/2PACX-1vQmF_V2-lON6Zm_FEkSIhvDbtC18rcMWLqgosN7km_HiCv6zlRVMy7gB0XIkaJb7w5vwzfTFgppLpWo/pub?output=csv';
 
       function init() {
         Papa.parse(public_spreadsheet_url, {
@@ -21,8 +21,8 @@
         var data = results.data
 
         // data comes through as a simple array since simpleSheet is turned on
-        alert("Successfully processed " + data.length + " rows!")
-        document.getElementById("food").innerHTML = "<strong>Foods:</strong> " + [ data[0].Name, data[1].Name, data[2].Name ].join(", ");
+        // alert("Successfully processed " + data.length + " rows!")
+        document.getElementById("runner").innerHTML = "<strong>Runner:</strong> " + [ data[0].Name, data[1].Name, data[2].Name ].join(", ");
         console.log(data);
       }
 
