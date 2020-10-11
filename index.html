@@ -18,13 +18,13 @@
 
     function showInfo(results) {
       var data = results.data
-      document.getElementById("sean_id").innerHTML = "Sean testing running results:<br>"
+      document.getElementById("sean_id").innerHTML = ""
       // data comes through as a simple array since simpleSheet is turned on
       // alert("Successfully processed " + data.length + " rows!")
       // document.getElementById("runner").innerHTML = "<strong>Runner:</strong> " + [ data[0]['PAX name'], data[1]['PAX name'] ].join(", ");
       for (var pax of data)
       {
-        $("#sean_id").append("<td>" + pax['PAX name'] + "</td></td>" + pax['Best time for 13.1 miles'] + "</td><td>" + pax['Age'] + "</td><td>" + pax['Team Name'] + "</td>");
+        $("#sean_id").append("<tr><td>" + pax['PAX name'] + "</td></td>" + pax['Best time for 13.1 miles'] + "</td><td>" + pax['Age'] + "</td><td>" + pax['Team Name'] + "</td></tr>");
       }
       console.log(data);
     }
@@ -33,14 +33,13 @@
 </head>
   <body>
     <p><strong>Test by Sean</p>
-    <table>
-    <tr>
-      <th>Name</th>
-      <th>Time</th>
-      <th>Age</th>
-      <th>Team</th>
-    </tr>
-    <p id="sean_id"></p>
+    <table id="sean_id"></p>
+      <tr>
+        <th>Name</th>
+        <th>Time</th>
+        <th>Age</th>
+        <th>Team</th>
+      </tr>
     </table>
 
 
