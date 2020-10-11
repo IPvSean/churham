@@ -23,7 +23,7 @@
 
         // data comes through as a simple array since simpleSheet is turned on
         // alert("Successfully processed " + data.length + " rows!")
-        document.getElementById("runner").innerHTML = "<strong>Runner:</strong> " + [ data[0].runner, data[1].runner ].join(", ");
+        document.getElementById("runner").innerHTML = "<strong>Runner:</strong> " + [ data[0]['PAX name'], data[1]['PAX name'] ].join(", ");
         console.log(data);
       }
 
