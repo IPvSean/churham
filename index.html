@@ -3,41 +3,6 @@
   <body>
     <p><strong>Test by Sean</p>
     <p id="runner"></p>
-    <script type="text/javascript">
-    var addToObject = function (obj, key, value, index) {
-
-      // Create a temp object and index variable
-      var temp = {};
-      var i = 0;
-
-      // Loop through the original object
-      for (var prop in obj) {
-        if (obj.hasOwnProperty(prop)) {
-
-          // If the indexes match, add the new item
-          if (i === index && key && value) {
-            temp[key] = value;
-          }
-
-          // Add the current item in the loop to the temp obj
-          temp[prop] = obj[prop];
-
-          // Increase the count
-          i++;
-
-        }
-      }
-
-      // If no index, add to the end
-      if (!index && key && value) {
-        temp[key] = value;
-      }
-
-      return temp;
-
-    };
-    </script>
-
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
     <script type="text/javascript">
@@ -52,7 +17,7 @@
       }
 
       window.addEventListener('DOMContentLoaded', init)
-      const full_output = {};
+
       function showInfo(results) {
         var data = results.data
 
@@ -61,10 +26,9 @@
         // document.getElementById("runner").innerHTML = "<strong>Runner:</strong> " + [ data[0]['PAX name'], data[1]['PAX name'] ].join(", ");
         for (var pax of data)
         {
-          var full_output = addToObject(full_output, pax['PAX name'] + " " + pax['Best time for 13.1 miles'] + " " + pax['Age'] + pax['Team Name'] + "<br />");
+          document.write(pax['PAX name'] + " " + pax['Best time for 13.1 miles'] + " " + pax['Age'] + pax['Team Name'] + "<br />");
         }
         console.log(data);
-        document.getElementById("runner").innerHTML = full_output;
       }
 
     </script>
