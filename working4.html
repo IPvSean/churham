@@ -19,18 +19,18 @@
 .styled-table td {
     padding: 12px 15px;
 }
-.styled-table tbody tr {
+.styled-table tr {
     border-bottom: 1px solid #dddddd;
 }
 
-.styled-table tbody tr:nth-of-type(even) {
+.styled-table tr:nth-of-type(even) {
     background-color: #f3f3f3;
 }
 
-.styled-table tbody tr:last-of-type {
+.styled-table tr:last-of-type {
     border-bottom: 2px solid #009879;
 }
-.styled-table tbody tr.active-row {
+.styled-table tr.active-row {
     font-weight: bold;
     color: #009879;
 }
@@ -55,10 +55,9 @@
       var data = results.data
       for (var pax of data)
       {
-        // var table = document.getElementById("sean_id");
-        var tableref =  document.getElementById('sean_id').document.getElementsByTagName("tbody");
+        var table = document.getElementById("sean_id");
         //append row at end
-        var row = tableref.insertRow(-1);
+        var row = table.insertRow(-1);
         //all cells are in one row
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
@@ -85,8 +84,6 @@
           <th>Team</th>
         </tr>
       </thead>
-      <tbody>
-      </tbody>
     </table>
 
 
