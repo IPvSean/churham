@@ -86,12 +86,11 @@
         // console.log(data);
         data.sort(function(a,b) {
             var a_time = a['Best time'].split(":");
-            var hour = a_time[0]
-            var minutes = a_time[1]
-            var seconds = a_time[2]
-            console.log(hour);
-            console.log(minutes);
-            console.log(seconds);
+            var a_hour = parseInt(a_time[0])
+            var a_minutes = parseInt(a_time[1])
+            var a_seconds = parseInt(a_time[2])
+            var a_total_time = (a_hour * 60 * 60) + (a_minutes * 60) + a_seconds
+            console.log(a_total_time);
             // a['Best time'].padStart(8, '0').localeCompare(b['Best time'].padStart(8, '0'));
         });
        // console.log(data);
