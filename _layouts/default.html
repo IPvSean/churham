@@ -84,13 +84,13 @@
           }
         }
         // console.log(data);
+        data.sort(function(a,b) {
+            a['Best time'].padStart(8, '0').localeCompare(b['Best time'].padStart(8, '0'));
+        });
+       console.log(test_data);
       }
-      var test_data = results.data
 
-      data.sort(function(a,b) {
-          a['Best time'].padStart(8, '0').localeCompare(b['Best time'].padStart(8, '0'));
-      });
-     console.log(test_data);
+
 
 
   </script>
