@@ -25,7 +25,7 @@
         for (var pax of data)
         {
           if (pax['PAX name'] != "" && pax['Best time'] != "99:00:00") {
-            if (pax['Team Name'].contains("The Cougars")) {
+            if (pax['Team Name'].includes("The Cougars")) {
                 var cougarref =  document.getElementById('cougar_id').getElementsByTagName("tbody")[0];
                 //append row at end
                 var row = cougarref.insertRow(-1);
@@ -39,7 +39,7 @@
                 cell3.innerHTML = pax['Best time'];
                 cell4.innerHTML = pax['Age'];
             }
-            if (pax['Team Name'].contains("The Rabbits")) {
+            if (pax['Team Name'].includes("The Rabbits")) {
                 var rabbitref =  document.getElementById('rabbit_id').getElementsByTagName("tbody")[0];
                 //append row at end
                 var rabbitrow = rabbitref.insertRow(-1);
@@ -53,7 +53,7 @@
                 cell3.innerHTML = pax['Best time'];
                 cell4.innerHTML = pax['Age'];
             }
-            if (pax['Team Name'].contains("The Goats")) {
+            if (pax['Team Name'].includes("The Goats")) {
                 var goatref =  document.getElementById('goat_id').getElementsByTagName("tbody")[0];
                 //append row at end
                 var goatrow = goatref.insertRow(-1);
