@@ -3,10 +3,12 @@
 
 @import "{{ site.theme }}";
 
-#logo {
-  position: relative;
-  top: -90px;
-  float: right;
+@media (max-width : 500px) {
+  #logo {
+    position: relative;
+    top: -90px;
+    float: right;
+  }
 }
 #logo img {
   max-width: 300px;
