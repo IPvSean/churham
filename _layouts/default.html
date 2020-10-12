@@ -90,10 +90,14 @@
             var a_minutes = parseInt(a_time[1])
             var a_seconds = parseInt(a_time[2])
             var a_total_time = (a_hour * 60 * 60) + (a_minutes * 60) + a_seconds
-            console.log(a_total_time);
-            // a['Best time'].padStart(8, '0').localeCompare(b['Best time'].padStart(8, '0'));
+            var b_time = b['Best time'].split(":");
+            var b_hour = parseInt(b_time[0])
+            var b_minutes = parseInt(b_time[1])
+            var b_seconds = parseInt(b_time[2])
+            var b_total_time = (b_hour * 60 * 60) + (b_minutes * 60) + b_seconds
+            return a_total_time - b_total_time
         });
-       // console.log(data);
+       console.log(data);
       }
 
 
