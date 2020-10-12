@@ -2,6 +2,12 @@
 ---
 
 @import "{{ site.theme }}";
+
+#logo img {
+  max-width: 300px;
+  padding: 0px;
+  margin: 0px;
+}
 // .styled-table {
 //     border-collapse: collapse;
 //     margin: 25px 0;
