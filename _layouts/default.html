@@ -86,16 +86,16 @@
         // console.log(data);
         data.sort(function(a,b) {
             var a_time = a['Best time'].split(":");
-            var a_hour = parseInt(a_time[0])
-            var a_minutes = parseInt(a_time[1])
-            var a_seconds = parseInt(a_time[2])
-            var a_total_time = (a_hour * 60 * 60) + (a_minutes * 60) + a_seconds
+            var a_hour = parseInt(a_time[0]);
+            var a_minutes = parseInt(a_time[1]);
+            var a_seconds = parseInt(a_time[2]);
+            var a_total_time = (a_hour * 60 * 60) + (a_minutes * 60) + a_seconds;
             var b_time = b['Best time'].split(":");
-            var b_hour = parseInt(b_time[0])
-            var b_minutes = parseInt(b_time[1])
-            var b_seconds = parseInt(b_time[2])
-            var b_total_time = (b_hour * 60 * 60) + (b_minutes * 60) + b_seconds
-            return a_total_time - b_total_time
+            var b_hour = parseInt(b_time[0]);
+            var b_minutes = parseInt(b_time[1]);
+            var b_seconds = parseInt(b_time[2]);
+            var b_total_time = (b_hour * 60 * 60) + (b_minutes * 60) + b_seconds;
+            return a_total_time - b_total_time;
         });
        console.log(data);
       }
