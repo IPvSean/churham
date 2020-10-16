@@ -96,6 +96,9 @@
                 if (Number.isInteger(parseInt(pax['Total Halves run']))){
                   rabbit_total_runs = rabbit_total_runs + parseInt(pax['Total Halves run']);
                 }
+                if (rabbit_total <= 5){
+                  rabbit_run_score = rabbit_run_score + parseInt(pax['Rank']);
+                }
             }
             if (pax['Team Name'].includes("The Goats")) {
                 var goatref =  document.getElementById('goat_id').getElementsByTagName("tbody")[0];
@@ -115,6 +118,9 @@
                 goat_total = goat_total + 1;
                 if (Number.isInteger(parseInt(pax['Total Halves run']))){
                   goat_total_runs = goat_total_runs + parseInt(pax['Total Halves run']);
+                }
+                if (goat_total <= 5){
+                  goat_run_score = goat_run_score + parseInt(pax['Rank']);
                 }
             }
             if (pax['Team Name'].includes("The Bulls")) {
@@ -136,6 +142,9 @@
                 if (Number.isInteger(parseInt(pax['Total Halves run']))){
                   bull_total_runs = bull_total_runs + parseInt(pax['Total Halves run']);
                 }
+                if (bull_total <= 5){
+                  bull_run_score = bull_run_score + parseInt(pax['Rank']);
+                }
             }
           }
         }
@@ -143,9 +152,11 @@
         var cell1_sum = sum_row.insertCell(0);
         var cell2_sum = sum_row.insertCell(1);
         var cell3_sum = sum_row.insertCell(2);
+        var cell4_sum = sum_row.insertCell(3);
         cell1_sum.innerHTML = "The Bulls";
         cell2_sum.innerHTML = bull_total;
         cell3_sum.innerHTML = bull_total_runs;
+        cell4_sum.innerHTML = bull_run_score;
 
         var sum_row2 = summaryref.insertRow(-1);
         var cell1_sum = sum_row2.insertCell(0);
@@ -161,17 +172,21 @@
         var cell1_sum = sum_row3.insertCell(0);
         var cell2_sum = sum_row3.insertCell(1);
         var cell3_sum = sum_row3.insertCell(2);
+        var cell4_sum = sum_row3.insertCell(3);
         cell1_sum.innerHTML = "The Goats";
         cell2_sum.innerHTML = goat_total;
         cell3_sum.innerHTML = goat_total_runs;
+        cell4_sum.innerHTML = goat_run_score;
 
         var sum_row4 = summaryref.insertRow(-1);
         var cell1_sum = sum_row4.insertCell(0);
         var cell2_sum = sum_row4.insertCell(1);
         var cell3_sum = sum_row4.insertCell(2);
+        var cell4_sum = sum_row4.insertCell(3);
         cell1_sum.innerHTML = "The Rabbits";
         cell2_sum.innerHTML = rabbit_total;
         cell3_sum.innerHTML = rabbit_total_runs;
+        cell4_sum.innerHTML = rabbit_run_score;
       }
 
 
