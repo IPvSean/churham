@@ -41,6 +41,7 @@
             return a_total_time - b_total_time;
         });
        console.log(data);
+       var summaryref =  document.getElementById('summary_id').getElementsByTagName("tbody")[0];
 
         for (var pax of data)
         {
@@ -113,6 +114,11 @@
                 cell5.innerHTML = pax['Total Halves run'];
                 bull_total = bull_total + 1;
             }
+            var sum_row = summaryref.insertRow(-1);
+            var cell1_sum = sum_row.insertCell(0);
+            var cell2_sum = sum_row.insertCell(1);
+            cell2_sum.innerHTML = "The Cougars";
+            cell2_sum.innerHTML = cougar_total;
           }
         }
       }
