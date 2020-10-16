@@ -187,6 +187,25 @@
         cell2_sum.innerHTML = rabbit_total;
         cell3_sum.innerHTML = rabbit_total_runs;
         cell4_sum.innerHTML = rabbit_run_score;
+
+        var sum_row5 = summaryref.insertRow(-1);
+        var cell1_sum = sum_row5.insertCell(0);
+        var cell2_sum = sum_row5.insertCell(1);
+        cell1_sum.innerHTML = "";
+        if (cougar_total > goat_total && cougar_total > bull_total && cougar_total > rabbit_total){
+          cell2_sum.innerHTML = "The Cougars win!";
+        }
+        if (goat_total > cougar_total && goat_total > bull_total && goat_total > rabbit_total){
+          cell2_sum.innerHTML = "The Goats win!";
+        }
+        if (bull_total > cougar_total && bull_total > goat_total && bull_total > rabbit_total){
+          cell2_sum.innerHTML = "The Bulls win!";
+        }
+        if (rabbit_total > cougar_total && rabbit_total > bull_total && rabbit_total > goat_total){
+          cell2_sum.innerHTML = "The Goats win!";
+        }
+
+
       }
 
 
