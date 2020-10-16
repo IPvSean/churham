@@ -218,6 +218,19 @@
           cell2_sum.innerHTML = "The Goats win!";
         }
 
+        if (cougar_run_score < goat_run_score && cougar_run_score < bull_run_score && cougar_run_score < rabbit_run_score){
+          cell2_sum.innerHTML = "The Cougars win!";
+        }
+        if (goat_run_score < cougar_run_score && goat_run_score < bull_run_score && goat_run_score < rabbit_run_score){
+          cell2_sum.innerHTML = "The Goats win!";
+        }
+        if (bull_run_score < cougar_run_score && bull_run_score < goat_run_score && bull_run_score < rabbit_run_score){
+          cell2_sum.innerHTML = "The Bulls win!";
+        }
+        if (rabbit_run_score < cougar_run_score && rabbit_run_score < bull_run_score && rabbit_run_score < goat_run_score){
+          cell2_sum.innerHTML = "The Goats win!";
+        }
+
 
       }
 
