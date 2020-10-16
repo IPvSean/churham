@@ -30,6 +30,10 @@
         var cougar_total_runs = 0;
         var bull_total_runs = 0;
         var goat_total_runs = 0;
+        var rabbit_run_score = 0;
+        var cougar_run_score = 0;
+        var bull_run_score = 0;
+        var goat_run_score = 0;
 
         data.sort(function(a,b) {
             var a_time = a['Best time'].split(":");
@@ -68,6 +72,9 @@
                 cougar_total = cougar_total + 1;
                 if (Number.isInteger(parseInt(pax['Total Halves run']))){
                   cougar_total_runs = cougar_total_runs + parseInt(pax['Total Halves run']);
+                }
+                if (cougar_total <= 5){
+                  cougar_run_score = cougar_run_score + parseInt(pax['Rank']);
                 }
             }
             if (pax['Team Name'].includes("The Rabbits")) {
@@ -144,9 +151,11 @@
         var cell1_sum = sum_row2.insertCell(0);
         var cell2_sum = sum_row2.insertCell(1);
         var cell3_sum = sum_row2.insertCell(2);
+        var cell4_sum = sum_row2.insertCell(3);
         cell1_sum.innerHTML = "The Cougars";
         cell2_sum.innerHTML = cougar_total;
         cell3_sum.innerHTML = cougar_total_runs;
+        cell4_sum.innerHTML = cougar_run_score;
 
         var sum_row3 = summaryref.insertRow(-1);
         var cell1_sum = sum_row3.insertCell(0);
