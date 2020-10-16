@@ -204,6 +204,19 @@
         if (rabbit_total > cougar_total && rabbit_total > bull_total && rabbit_total > goat_total){
           cell2_sum.innerHTML = "The Goats win!";
         }
+// total runs math
+        if (cougar_total_runs > goat_total_runs && cougar_total_runs > bull_total_runs && cougar_total_runs > rabbit_total_runs){
+          cell2_sum.innerHTML = "The Cougars win!";
+        }
+        if (goat_total_runs > cougar_total_runs && goat_total_runs > bull_total_runs && goat_total_runs > rabbit_total_runs){
+          cell2_sum.innerHTML = "The Goats win!";
+        }
+        if (bull_total_runs > cougar_total_runs && bull_total_runs > goat_total_runs && bull_total_runs > rabbit_total_runs){
+          cell2_sum.innerHTML = "The Bulls win!";
+        }
+        if (rabbit_total_runs > cougar_total_runs && rabbit_total_runs > bull_total_runs && rabbit_total_runs > goat_total_runs){
+          cell2_sum.innerHTML = "The Goats win!";
+        }
 
 
       }
