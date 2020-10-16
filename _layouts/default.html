@@ -191,6 +191,9 @@
         var sum_row5 = summaryref.insertRow(-1);
         var cell1_sum = sum_row5.insertCell(0);
         var cell2_sum = sum_row5.insertCell(1);
+        var cell3_sum = sum_row5.insertCell(1);
+        var cell4_sum = sum_row5.insertCell(1);
+
         cell1_sum.innerHTML = "";
         if (cougar_total > goat_total && cougar_total > bull_total && cougar_total > rabbit_total){
           cell2_sum.innerHTML = "The Cougars win!";
@@ -206,29 +209,29 @@
         }
 // total runs math
         if (cougar_total_runs > goat_total_runs && cougar_total_runs > bull_total_runs && cougar_total_runs > rabbit_total_runs){
-          cell2_sum.innerHTML = "The Cougars win!";
+          cell3_sum.innerHTML = "The Cougars win!";
         }
         if (goat_total_runs > cougar_total_runs && goat_total_runs > bull_total_runs && goat_total_runs > rabbit_total_runs){
-          cell2_sum.innerHTML = "The Goats win!";
+          cell3_sum.innerHTML = "The Goats win!";
         }
         if (bull_total_runs > cougar_total_runs && bull_total_runs > goat_total_runs && bull_total_runs > rabbit_total_runs){
-          cell2_sum.innerHTML = "The Bulls win!";
+          cell3_sum.innerHTML = "The Bulls win!";
         }
         if (rabbit_total_runs > cougar_total_runs && rabbit_total_runs > bull_total_runs && rabbit_total_runs > goat_total_runs){
-          cell2_sum.innerHTML = "The Goats win!";
+          cell3_sum.innerHTML = "The Goats win!";
         }
 
         if (cougar_run_score < goat_run_score && cougar_run_score < bull_run_score && cougar_run_score < rabbit_run_score){
-          cell2_sum.innerHTML = "The Cougars win!";
+          cell4_sum.innerHTML = "The Cougars win!";
         }
         if (goat_run_score < cougar_run_score && goat_run_score < bull_run_score && goat_run_score < rabbit_run_score){
-          cell2_sum.innerHTML = "The Goats win!";
+          cell4_sum.innerHTML = "The Goats win!";
         }
         if (bull_run_score < cougar_run_score && bull_run_score < goat_run_score && bull_run_score < rabbit_run_score){
-          cell2_sum.innerHTML = "The Bulls win!";
+          cell4_sum.innerHTML = "The Bulls win!";
         }
         if (rabbit_run_score < cougar_run_score && rabbit_run_score < bull_run_score && rabbit_run_score < goat_run_score){
-          cell2_sum.innerHTML = "The Goats win!";
+          cell4_sum.innerHTML = "The Goats win!";
         }
 
 
