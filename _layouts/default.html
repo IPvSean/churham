@@ -66,7 +66,8 @@
                 cell4.innerHTML = pax['Age'];
                 cell5.innerHTML = pax['Total Halves run'];
                 cougar_total = cougar_total + 1;
-                cougar_total_runs = cougar_total_runs + parseInt(pax['Total Halves run']);
+                var an_int = parseInt(pax['Total Halves run']);
+                cougar_total_runs = cougar_total_runs + an_int;
             }
             if (pax['Team Name'].includes("The Rabbits")) {
                 var rabbitref =  document.getElementById('rabbit_id').getElementsByTagName("tbody")[0];
@@ -126,18 +127,21 @@
         var cell2_sum = sum_row.insertCell(1);
         cell1_sum.innerHTML = "The Bulls";
         cell2_sum.innerHTML = bull_total;
+
         var sum_row2 = summaryref.insertRow(-1);
         var cell1_sum = sum_row2.insertCell(0);
         var cell2_sum = sum_row2.insertCell(1);
-        var cell2_sum = sum_row2.insertCell(2);
+        var cell3_sum = sum_row3.insertCell(2);
         cell1_sum.innerHTML = "The Cougars";
         cell2_sum.innerHTML = cougar_total;
-        cell2_sum.innerHTML = cougar_total_runs;
+        cell3_sum.innerHTML = cougar_total_runs;
+
         var sum_row3 = summaryref.insertRow(-1);
         var cell1_sum = sum_row3.insertCell(0);
         var cell2_sum = sum_row3.insertCell(1);
         cell1_sum.innerHTML = "The Goats";
         cell2_sum.innerHTML = goat_total;
+
         var sum_row4 = summaryref.insertRow(-1);
         var cell1_sum = sum_row4.insertCell(0);
         var cell2_sum = sum_row4.insertCell(1);
