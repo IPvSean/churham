@@ -133,6 +133,7 @@
                 var cell3 = bullrow.insertCell(2);
                 var cell4 = bullrow.insertCell(3);
                 var cell5 = bullrow.insertCell(4);
+                var cell6 = bullrow.insertCell(5);
                 cell1.innerHTML = pax['PAX name'];
                 cell2.innerHTML = pax['Rank'];
                 cell3.innerHTML = pax['Best time'];
@@ -140,7 +141,16 @@
                 cell5.innerHTML = pax['Total Halves run'];
                 bull_total = bull_total + 1;
                 if (Number.isInteger(parseInt(pax['Total Halves run']))){
-                  bull_total_runs = bull_total_runs + parseInt(pax['Total Halves run']);
+                  var countable_runs = parseInt(pax['Total Halves run']);
+                  if (countable_runs <= 5){
+                  //do nothing, keep original number
+                  }
+                  else if (countable_runs > 5) {
+                    //assuming countable_runs > 5
+                    countable_runs = 5;
+                  }
+                  cell6.innerHTML = countable_runs;
+                  bull_total_runs = bull_total_runs + countable_runs
                 }
                 if (bull_total <= 5){
                   bull_run_score = bull_run_score + parseInt(pax['Rank']);
