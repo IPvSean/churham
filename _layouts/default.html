@@ -110,6 +110,7 @@
                 var cell3 = goatrow.insertCell(2);
                 var cell4 = goatrow.insertCell(3);
                 var cell5 = goatrow.insertCell(4);
+                var cell6 = goatrow.insertCell(5);
                 cell1.innerHTML = pax['PAX name'];
                 cell2.innerHTML = pax['Rank'];
                 cell3.innerHTML = pax['Best time'];
@@ -118,6 +119,16 @@
                 goat_total = goat_total + 1;
                 if (Number.isInteger(parseInt(pax['Total Halves run']))){
                   goat_total_runs = goat_total_runs + parseInt(pax['Total Halves run']);
+                  var countable_runs = parseInt(pax['Total Halves run']);
+                  if (countable_runs <= 5){
+                  //do nothing, keep original number
+                  }
+                  else if (countable_runs > 5) {
+                    //assuming countable_runs > 5
+                    countable_runs = 5;
+                  }
+                  cell6.innerHTML = countable_runs;
+                  goat_total_runs = goat_total_runs + countable_runs
                 }
                 if (goat_total <= 5){
                   goat_run_score = goat_run_score + parseInt(pax['Rank']);
